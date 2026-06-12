@@ -1,0 +1,19 @@
+{
+  "telemetry": {
+    "global": {
+      "allowTelemetry": true,
+      "lastPrompted": 1781247862295,
+      "version": "2.0.0"
+    }
+  },
+  "library": {
+    "components": [
+      "**/*.webflow.@(js|jsx|mjs|ts|tsx)"
+    ],
+    "name": "av-new-component",
+    "description": "Code Components",
+    "id": "av-new-component",
+    "globals": "./src/globals.ts"
+  },
+  "siteId": "68d14b7cbd9b430ef4422b3d"
+}
