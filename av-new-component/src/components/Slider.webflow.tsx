@@ -12,6 +12,16 @@ export default declareComponent(CustomSlider, {
       defaultValue: "#f5f7fb",
     }),
 
+    sectionTitle: props.Text({
+      name: "Section Title",
+      defaultValue: "Swiper Slider",
+    }),
+
+    sectionDescription: props.Text({
+      name: "Section Description",
+      defaultValue: "Best of our portfolio",
+    }),
+
     // Slide 1
     slide1Title: props.Text({
       name: "Slide 1 Title",

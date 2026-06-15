@@ -8,6 +8,8 @@ interface GalleryImage {
 
 interface GalleryProps {
   sectionBg: string;
+  title: string;
+  description: string;
 
   image1: GalleryImage;
   image2: GalleryImage;
@@ -62,7 +64,13 @@ export const Gallery = (props: GalleryProps) => {
         backgroundColor: props.sectionBg,
       }}
     >
+
       <div className="max-w-[1400px] mx-auto">
+
+        <div className="flex flex-col items-center text-center text-black p-6 mb-10">
+          <h1 className="text-5xl font-bold mb-3">{props.title}</h1>
+          <p className="text-base text-gray-700 max-w-md">{props.description}</p>
+        </div>
 
         {/* Masonry */}
         <div className="columns-1 sm:columns-2 lg:columns-4 gap-6 space-y-6">

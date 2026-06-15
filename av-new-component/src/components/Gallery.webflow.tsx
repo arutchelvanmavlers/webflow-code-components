@@ -12,6 +12,16 @@ export default declareComponent(Gallery, {
       defaultValue: "#f5f7fb",
     }),
 
+    title: props.Text({
+      name: "Section Title",
+      defaultValue: "Masonry Gallery",
+    }),
+
+    description: props.Text({
+      name: "Section Description",
+      defaultValue: "Best of our portfolio",
+    }),
+
     image1: props.Image({
       name: "Image 1",
     }),

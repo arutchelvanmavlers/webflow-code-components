@@ -3,6 +3,8 @@ import { useState } from "react";
 
 interface TabsProps {
     sectionBg: string;
+    sectionTitle: string;
+  sectionDescription: string;
 
   tab1Title: string;
   tab1Icon: { src: string; alt?: string };
@@ -59,6 +61,11 @@ export const Tabs = (props: TabsProps) => {
     backgroundColor: props.sectionBg,
   }}
 >
+
+        <div className="flex flex-col items-center text-center text-black p-6 mb-5 max-w-[1200px] mx-auto">
+          <h1 className="text-5xl font-bold mb-3">{props.sectionTitle}</h1>
+          <p className="text-base text-gray-700 max-w-md">{props.sectionDescription}</p>
+        </div>
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-10">
 
         {/* Left Side */}
@@ -70,8 +77,8 @@ export const Tabs = (props: TabsProps) => {
   onClick={() => setActiveTab(index + 1)}
   className={`cursor-pointer relative overflow-hidden rounded-3xl min-h-[120px] p-6 text-left border transition-all duration-300 ${
     activeTab === index + 1
-      ? "border-2 border-black bg-white shadow-xl"
-      : "border-gray-200"
+      ? "border-2 border-solid border-black bg-white shadow-xl"
+      : "border-2 border-solid border-gray-200"
   }`}
 >
               {/* Background Image Only for Inactive Tabs */}

@@ -28,6 +28,8 @@ interface AccordionItem {
 
 interface AccordionProps {
   sectionBg: string;
+  sectionTitle: string;
+  sectionDescription: string;
 
   item1Title: string;
   item1Description: string;
@@ -144,6 +146,11 @@ export const Accordion = (props: AccordionProps) => {
     >
       <div className="max-w-[1100px] mx-auto flex flex-col gap-5">
 
+        <div className="flex flex-col items-center text-center text-black p-6 mb-5">
+          <h1 className="text-5xl font-bold mb-3">{props.sectionTitle}</h1>
+          <p className="text-base text-gray-700 max-w-md">{props.sectionDescription}</p>
+        </div>
+
         {items.map((item, index) => {
           const isOpen = openIndex === index;
 
@@ -152,8 +159,8 @@ export const Accordion = (props: AccordionProps) => {
               key={index}
               className={`rounded-3xl overflow-hidden border transition-all duration-300 ${
                 isOpen
-                  ? "bg-white border-black shadow-xl"
-                  : "bg-white border-gray-200"
+                  ? "bg-white border-2 border-solid border-black shadow-xl"
+                  : "bg-white border-2 border-solid border-gray-200"
               }`}
             >
               {/* Trigger */}

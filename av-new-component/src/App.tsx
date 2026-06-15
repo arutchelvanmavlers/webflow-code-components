@@ -3,6 +3,7 @@ import { Tabs } from "./components/Tab";
 import { CustomSlider } from "./components/Slider";
 import { Accordion } from "./components/Accordion";
 import { Gallery } from "./components/Gallery";
+import { CardModal } from "./components/CardModal";
 
 
 function App() {
@@ -15,6 +16,10 @@ function App() {
   
   <Tabs
       sectionBg = "#a9eeff"
+
+      sectionTitle="Custom Tab"
+      sectionDescription="Best of our portfolio"
+
       // TAB 1
       tab1Title="Design System"
       tab1Icon={{
@@ -58,6 +63,9 @@ function App() {
 
     <CustomSlider
       sectionBg="#f5f7fb"
+
+      sectionTitle="Swiper Slider"
+      sectionDescription="Best of our portfolio"
 
       slide1Title="Creative Design"
       slide1Description="Beautiful UI systems and animations."
@@ -117,6 +125,9 @@ function App() {
 
     <Accordion
       sectionBg="#f5f7fb"
+
+      sectionTitle="Custom Accordion"
+      sectionDescription="Best of our portfolio"
 
       /* ITEM 1 */
       item1Title="Creative Design"
@@ -219,6 +230,9 @@ function App() {
     <Gallery
       sectionBg="#f5f7fb"
 
+      title="Masonry Gallery"
+      description="Best of our portfolio"
+
       image1={{
         src: "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200",
       }}
@@ -265,6 +279,74 @@ function App() {
 
       image12={{
         src: "",
+      }}
+    />
+
+
+    <CardModal
+      sectionBg="#FBFAF0"
+
+      sectionTitle="Card Modal"
+      sectionDescription="Best of our portfolio"
+
+      card1Title="Creative Design"
+      card1Description="Modern UI and UX design systems for engaging experiences."
+      card1Image={{
+        src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200",
+      }}
+      card1ButtonText="Know More"
+      card1ButtonLink={{
+        href: "#",
+      }}
+
+      card2Title="Development"
+      card2Description="Scalable frontend architecture using React and Tailwind."
+      card2Image={{
+        src: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200",
+      }}
+      card2ButtonText="Know More"
+      card2ButtonLink={{
+        href: "#",
+      }}
+
+      card3Title="Marketing"
+      card3Description="Improve conversions and digital visibility."
+      card3Image={{
+        src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200",
+      }}
+      card3ButtonText="Know More"
+      card3ButtonLink={{
+        href: "#",
+      }}
+
+      card4Title="Branding"
+      card4Description="Create powerful and memorable brand systems."
+      card4Image={{
+        src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200",
+      }}
+      card4ButtonText="Know More"
+      card4ButtonLink={{
+        href: "#",
+      }}
+
+      card5Title="Automation"
+      card5Description="Automate workflows and improve operational efficiency."
+      card5Image={{
+        src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200",
+      }}
+      card5ButtonText="Know More"
+      card5ButtonLink={{
+        href: "#",
+      }}
+
+      card6Title="Growth"
+      card6Description="Scale your business using modern digital strategies."
+      card6Image={{
+        src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200",
+      }}
+      card6ButtonText="Know More"
+      card6ButtonLink={{
+        href: "#",
       }}
     />
 

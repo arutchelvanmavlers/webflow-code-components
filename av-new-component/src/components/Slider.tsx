@@ -10,6 +10,8 @@ import { Navigation, Pagination } from "swiper/modules";
 
 interface SliderProps {
   sectionBg: string;
+  sectionTitle: string;
+  sectionDescription: string;
 
   slide1Title: string;
   slide1Description: string;
@@ -141,6 +143,11 @@ export const CustomSlider = (props: SliderProps) => {
       }}
     >
       <div className="max-w-[1200px] mx-auto">
+
+        <div className="flex flex-col items-center text-center text-black p-6 mb-5">
+          <h1 className="text-5xl font-bold mb-3">{props.sectionTitle}</h1>
+          <p className="text-base text-gray-700 max-w-md">{props.sectionDescription}</p>
+        </div>
 
         <Swiper
           modules={[Navigation,Pagination]}

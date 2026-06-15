@@ -11,6 +11,16 @@ export default declareComponent(Tabs, {
         name: "Section Background",
         defaultValue: "#a9eeff",
     }),
+
+    sectionTitle: props.Text({
+      name: "Section Title",
+      defaultValue: "Custom Tab",
+    }),
+
+    sectionDescription: props.Text({
+      name: "Section Description",
+      defaultValue: "Best of our portfolio",
+    }),
     
     // TAB 1
     tab1Title: props.Text({

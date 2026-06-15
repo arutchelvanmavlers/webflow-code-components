@@ -12,6 +12,16 @@ export default declareComponent(Accordion, {
       defaultValue: "#f5f7fb",
     }),
 
+    sectionTitle: props.Text({
+      name: "Section Title",
+      defaultValue: "Custom Accordion",
+    }),
+
+    sectionDescription: props.Text({
+      name: "Section Description",
+      defaultValue: "Best of our portfolio",
+    }),
+
     // ITEM 1
     item1Title: props.Text({
       name: "Item 1 Title",
