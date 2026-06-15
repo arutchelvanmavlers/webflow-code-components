@@ -1,2 +1,12 @@
 @import "tailwindcss";
 *{box-sizing: border-box;}
+
+
+.iconCardSec .iconCardSecTitle{text-align: center;padding: 50px 0;}
+.iconCardSec .iconCardSecTitle h2{font-size: 50px;color: #000;}
+.iconCardSec .iconCardSecTitle p{font-size: 20px;color: #434343;}
+.iconCardSec .iconCardRow{display: flex;align-items: center;justify-content: center;flex-wrap: wrap;width: 100%;gap: 30px;}
+.iconCardSec .iconCardCol{background-color: #00539F;border-radius: 30px;width: calc(33.33% - 20px);padding: 25px;}
+.iconCardSec .iconCardImg{padding-bottom: 20px;}
+.iconCardSec .iconCardImg img{width: auto;height: 80px;}
+.iconCardSec .iconCardCol h4{font-size: 25px;font-weight: 400;color: #fff;}

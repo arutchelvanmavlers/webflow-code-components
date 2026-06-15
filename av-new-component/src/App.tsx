@@ -4,7 +4,8 @@ import { CustomSlider } from "./components/Slider";
 import { Accordion } from "./components/Accordion";
 import { Gallery } from "./components/Gallery";
 import { CardModal } from "./components/CardModal";
-
+import { ContactForm } from "./components/ContactForm";
+import { IconCard } from "./components/IconCard";
 
 function App() {
 
@@ -350,6 +351,28 @@ function App() {
       }}
     />
 
+
+    <ContactForm
+      sectionBg="#f5f7fb"
+
+      heading="Let's Build Something Amazing"
+
+      description="Fill out the form and our team will contact you shortly to discuss your project requirements and business goals."
+
+      firstNamePlaceholder="First Name"
+      lastNamePlaceholder="Last Name"
+      emailPlaceholder="Email Address"
+      phonePlaceholder="Phone Number"
+      companyPlaceholder="Company Name"
+      messagePlaceholder="Tell us about your project..."
+
+      submitButtonText="Send Message"
+
+      successMessage="Thank you for contacting us. Our team will get back to you shortly."
+    />
+
+
+      {/* <IconCard sectionBg="fbfaf0" heading="Success you can trust" description="Scale your business using modern digital strategies" /> */}
 
   </>
   
