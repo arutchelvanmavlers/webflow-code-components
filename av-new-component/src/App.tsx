@@ -7,6 +7,7 @@ import { CardModal } from "./components/CardModal";
 import { ContactForm } from "./components/ContactForm";
 // import { IconCard } from "./components/IconCard";
 import { PhotoGrid } from "./components/PhotoGrid";
+import { CliCard } from "./components/CliCard";
 
 function App() {
 
@@ -381,6 +382,45 @@ function App() {
         sectionDescription="This photo feed is fetched dynamically from the JSONPlaceholder REST API and rendered in a responsive React grid layout."
         limit={10}
       />
+
+      {/* CliCard CMS Preview Section */}
+      <section className="w-full py-20 px-6" style={{ backgroundColor: "#f5f7fb" }}>
+        <div className="max-w-[1200px] mx-auto">
+          <div className="flex flex-col items-center text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">Cli Card</h2>
+            <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">CMS-connected card component — bind each instance to a collection item in Webflow.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            <CliCard
+              name="Design"
+              slug="design"
+              cardTitle="Stunning Design Systems"
+              cardDescription="Build beautiful, consistent, and scalable digital interfaces with pre-compiled modular systems."
+              cardButtonText="Learn More"
+              cardButtonLink={{ href: "/cli-cards/cli-card-page", target: "_self" }}
+              cardImage={{ src: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800", alt: "Design" }}
+            />
+            <CliCard
+              name="Development"
+              slug="development"
+              cardTitle="Modern Frontend Architecture"
+              cardDescription="Leverage React, TypeScript, and Tailwind CSS to deliver fast, accessible, and maintainable user interfaces."
+              cardButtonText="Explore"
+              cardButtonLink={{ href: "/cli-cards/cli-card-page", target: "_self" }}
+              cardImage={{ src: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800", alt: "Development" }}
+            />
+            <CliCard
+              name="Marketing"
+              slug="marketing"
+              cardTitle="Growth-Driven Marketing"
+              cardDescription="Improve brand visibility and customer conversion using strategic, data-backed digital marketing campaigns."
+              cardButtonText="Get Started"
+              cardButtonLink={{ href: "/cli-cards/cli-card-page", target: "_self" }}
+              cardImage={{ src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800", alt: "Marketing" }}
+            />
+          </div>
+        </div>
+      </section>
   </>
 }
 
