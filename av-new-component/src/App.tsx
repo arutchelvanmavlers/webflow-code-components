@@ -5,7 +5,8 @@ import { Accordion } from "./components/Accordion";
 import { Gallery } from "./components/Gallery";
 import { CardModal } from "./components/CardModal";
 import { ContactForm } from "./components/ContactForm";
-import { IconCard } from "./components/IconCard";
+// import { IconCard } from "./components/IconCard";
+import { PhotoGrid } from "./components/PhotoGrid";
 
 function App() {
 
@@ -374,8 +375,13 @@ function App() {
 
       {/* <IconCard sectionBg="fbfaf0" heading="Success you can trust" description="Scale your business using modern digital strategies" /> */}
 
+      <PhotoGrid
+        sectionBg="#f9fafb"
+        sectionTitle="JSONPlaceholder Live Feed"
+        sectionDescription="This photo feed is fetched dynamically from the JSONPlaceholder REST API and rendered in a responsive React grid layout."
+        limit={10}
+      />
   </>
-  
 }
 
 export default App
