@@ -4,7 +4,8 @@ import { declareComponent } from "@webflow/react";
 
 export default declareComponent(CliCard, {
   name: "Cli Card",
-  description: "CMS connectable card component matching custom collection schema.",
+  description:
+    "CMS card with category and tags for Advanced CMS Filtering. Place inside a div that uses the filter's Cards Container Class.",
   group: "CMS Components",
 
   props: {
@@ -39,6 +40,24 @@ export default declareComponent(CliCard, {
 
     cardImage: props.Image({
       name: "Card Image",
+    }),
+
+    category: props.Text({
+      name: "Category",
+      defaultValue: "Design",
+      group: "CMS Filter Attributes",
+    }),
+
+    tags: props.Text({
+      name: "Tags",
+      defaultValue: "UI/UX, Figma",
+      group: "CMS Filter Attributes",
+    }),
+
+    badge: props.Text({
+      name: "Badge",
+      defaultValue: "Bestseller",
+      group: "CMS Filter Attributes",
     }),
   },
 });

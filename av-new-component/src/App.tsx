@@ -7,7 +7,9 @@ import { CardModal } from "./components/CardModal";
 import { ContactForm } from "./components/ContactForm";
 // import { IconCard } from "./components/IconCard";
 import { PhotoGrid } from "./components/PhotoGrid";
+import { CmsFilter } from "./components/CmsFilter";
 import { CliCard } from "./components/CliCard";
+import { Calculator } from "./components/Calculator";
 
 function App() {
 
@@ -281,7 +283,7 @@ function App() {
       }}
 
       image12={{
-        src: "",
+        src: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=1200",
       }}
     />
 
@@ -383,44 +385,103 @@ function App() {
         limit={10}
       />
 
-      {/* CliCard CMS Preview Section */}
-      <section className="w-full py-20 px-6" style={{ backgroundColor: "#f5f7fb" }}>
+      {/* Advanced CMS Filtering — syncs with Cli Cards via container class */}
+      <CmsFilter
+      sectionBg="#f5f7fb"
+      sectionTitle="Advanced CMS Filtering"
+      sectionDescription="Discover and filter cards"
+    >
+      <CliCard
+        cardTitle="Design Systems"
+        category="Design"
+        tags="UI/UX, Figma"
+      />
+
+      <CliCard
+        cardTitle="React Development"
+        category="Development"
+        tags="React, TypeScript"
+      />
+
+      <CliCard
+        cardTitle="Marketing Strategy"
+        category="Marketing"
+        tags="SEO, Analytics"
+      />
+    </CmsFilter>
+
+      {/* <section className="w-full py-20 px-6" style={{ backgroundColor: "#f5f7fb" }}>
         <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col items-center text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">Cli Card</h2>
-            <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">CMS-connected card component — bind each instance to a collection item in Webflow.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="cms-filter-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             <CliCard
               name="Design"
               slug="design"
-              cardTitle="Stunning Design Systems"
-              cardDescription="Build beautiful, consistent, and scalable digital interfaces with pre-compiled modular systems."
+              cardTitle="Design System Pro"
+              cardDescription="Build pixel-perfect, scalable design systems for modern digital products."
               cardButtonText="Learn More"
-              cardButtonLink={{ href: "/cli-cards/cli-card-page", target: "_self" }}
-              cardImage={{ src: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800", alt: "Design" }}
+              cardButtonLink={{ href: "#", target: "_self" }}
+              cardImage={{ src: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?q=80&w=800", alt: "Design" }}
+              category="Design"
+              tags="UI/UX, Figma, Animation"
+              badge="Bestseller"
             />
             <CliCard
               name="Development"
               slug="development"
-              cardTitle="Modern Frontend Architecture"
-              cardDescription="Leverage React, TypeScript, and Tailwind CSS to deliver fast, accessible, and maintainable user interfaces."
+              cardTitle="React Component Kit"
+              cardDescription="A comprehensive library of production-ready React UI components."
               cardButtonText="Explore"
-              cardButtonLink={{ href: "/cli-cards/cli-card-page", target: "_self" }}
-              cardImage={{ src: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800", alt: "Development" }}
+              cardButtonLink={{ href: "#", target: "_self" }}
+              cardImage={{ src: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=800", alt: "Development" }}
+              category="Development"
+              tags="React, TypeScript, Tailwind"
+              badge="New"
             />
             <CliCard
               name="Marketing"
               slug="marketing"
-              cardTitle="Growth-Driven Marketing"
-              cardDescription="Improve brand visibility and customer conversion using strategic, data-backed digital marketing campaigns."
+              cardTitle="SEO Growth Bundle"
+              cardDescription="Unlock first-page rankings with our proven SEO strategy framework."
               cardButtonText="Get Started"
-              cardButtonLink={{ href: "/cli-cards/cli-card-page", target: "_self" }}
-              cardImage={{ src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800", alt: "Marketing" }}
+              cardButtonLink={{ href: "#", target: "_self" }}
+              cardImage={{ src: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=800", alt: "Marketing" }}
+              category="Marketing"
+              tags="SEO, Analytics"
+              badge="Popular"
+            />
+            <CliCard
+              name="Branding"
+              slug="branding"
+              cardTitle="Brand Identity Kit"
+              cardDescription="Create powerful brand systems, visual identity, and consistent customer experiences."
+              cardButtonText="View Kit"
+              cardButtonLink={{ href: "#", target: "_self" }}
+              cardImage={{ src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800", alt: "Branding" }}
+              category="Branding"
+              tags="Branding, UI/UX"
+              badge="Trending"
+            />
+            <CliCard
+              name="Analytics"
+              slug="analytics"
+              cardTitle="Analytics Dashboard"
+              cardDescription="Track performance using smart dashboards and data-driven insights."
+              cardButtonText="Explore"
+              cardButtonLink={{ href: "#", target: "_self" }}
+              cardImage={{ src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800", alt: "Analytics" }}
+              category="Analytics"
+              tags="Analytics, API"
+              badge="Premium"
             />
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <Calculator
+      sectionBg="#f5f7fb"
+      heading="Basic Calculator"
+      buttonText="Generate PDF"
+    />
   </>
 }
 
